@@ -1,0 +1,21 @@
+trigger trigger1 on one__c (after insert) {
+
+List<two__c> mlist = new List<two__c>();
+
+   
+
+    for(one__c eobj : trigger.new){
+
+        two__c newField = new two__c();
+
+        newField.Name ='Field1';
+
+        newField.one__c = eobj.id;
+
+        mlist.add(newField);
+
+    }
+
+                insert mlist;
+
+}
