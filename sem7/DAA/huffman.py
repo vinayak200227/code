@@ -76,7 +76,7 @@ def huffman_decoding(encoded_data, root):
 
 if __name__ == "__main__":
     # Example usage:
-    data = "Vinayak"
+    data = "Hello"
     
     encoded_data, tree = huffman_encoding(data)
     print(f"Encoded data: {encoded_data}")
